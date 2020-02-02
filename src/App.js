@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {ParticipantForm} from "./components/ParticipantForm";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+
+        <div className="App">
+
+            <Header/>
+
+            <div className="container">
+                <ParticipantForm onEntryAdded={() => {
+                }}/>
+            </div>
+        </div>
+    );
+
+}
+
+function Header() {
+    return <div className="jumbotron">
+        <div className="container">
+            <h2>SecretSanta</h2>
+        </div>
+    </div>;
 }
 
 export default App;
